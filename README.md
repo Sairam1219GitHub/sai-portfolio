@@ -1,15 +1,19 @@
 # Portfolio Website - B Sai Ram
 
-A modern, responsive portfolio website built with Next.js, React, and Tailwind CSS.
+A modern, responsive portfolio website for **B Sai Ram** (AI Engineer & Full Stack Developer), built with Next.js 14, React, TypeScript, and Tailwind CSS.
+
+Live URL: [sai-portfolio-gules.vercel.app](https://sai-portfolio-gules.vercel.app)
 
 ## Features
 
-- 🎨 Modern and responsive design
-- ⚡ Fast performance with Next.js
-- 📱 Mobile-first approach
-- 🎯 Smooth scrolling navigation
-- 💼 Showcases skills, experience, and projects
-- 📧 Contact information and social links
+- 🤖 Highlights AI Engineering (RAG, LangGraph, LlamaIndex, Pinecone, RAGAS) & Full Stack Development
+- 🎨 Modern glassmorphism dark theme with responsive styling
+- ⚡ Fast performance with Next.js 14 App Router
+- 📱 Mobile-first responsive design
+- 🎯 Dynamic navigation with scrollspy active indicators
+- 💼 Detailed timeline for AI Engineer & Software Developer roles
+- 🚀 Featured projects covering multi-agent RAG platforms, enterprise SaaS, and EdTech
+- 📧 Working contact form and direct reach-out channels (Email, Phone, LinkedIn, GitHub)
 
 ## Technologies Used
 

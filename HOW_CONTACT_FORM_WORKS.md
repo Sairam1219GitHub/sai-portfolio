@@ -98,7 +98,7 @@ You need to integrate an email service. Here are your options:
 2. Data goes to `/api/contact` ✅
 3. API validates and **sends email to you** ✅
 4. User sees success message ✅
-5. **You receive email at BSAIRAM3011@GMAIL.COM** ✅
+5. **You receive email at sairamb3917@gmail.com** ✅
 
 ## 🔍 Testing the Form
 

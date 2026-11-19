@@ -23,9 +23,9 @@ export default function About() {
                 Jawaharlal Nehru Technological University, Hyderabad
               </p>
               <p className="text-body">
-                Bachelor of Technology in Electronics Communication Engineering
+                Bachelor of Technology in Electronics and Communication Engineering
               </p>
-              <p className="text-body-small">2019 – 2023</p>
+              <p className="text-body-small">Hyderabad, India • 2019 – 2023</p>
             </div>
           </article>
 
@@ -39,19 +39,13 @@ export default function About() {
             </div>
             <div className="space-y-4">
               <p className="text-body">
-                I'm a passionate Full Stack Developer with experience in building scalable web applications
-                using modern technologies. I specialize in React, Next.js, Node.js, and Express.js, with
-                expertise in both frontend and backend development.
+                I am an <span className="text-[#F9FAFB] font-semibold">AI Engineer and Full Stack Developer</span> with experience building end-to-end Generative AI applications, Retrieval-Augmented Generation (RAG) systems, and multi-agent workflows using LangGraph.
               </p>
               <p className="text-body">
-                My experience includes developing responsive user interfaces, building RESTful APIs,
-                implementing authentication systems, and deploying containerized applications. I'm
-                proficient in managing application state with Redux, optimizing performance, and
-                following Agile methodologies.
+                My technical expertise spans document processing with Unstructured.io, semantic chunking, dense/hybrid retrieval (BM25 + vector search), multi-query expansion, Cross-Encoder reranking, vector databases (Pinecone, ChromaDB), and automated LLM evaluation with RAGAS and LLM-as-a-Judge.
               </p>
               <p className="text-body">
-                I'm always eager to learn new technologies and take on challenging projects that push
-                the boundaries of what's possible in web development.
+                I specialize in developing scalable AI microservices using Python, FastAPI, Docker, and AWS EKS, backed by workflow orchestration (Apache Airflow), CI/CD automation (GitHub Actions), infrastructure as code (Terraform), and robust observability using LangSmith, AWS CloudWatch, and Grafana.
               </p>
             </div>
           </article>

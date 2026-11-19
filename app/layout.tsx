@@ -17,14 +17,16 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  title: 'B Sai Ram - Full Stack Developer | Portfolio',
-  description: 'Experienced Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. Building scalable applications with a focus on performance and user experience.',
-  keywords: 'Full Stack Developer, React, Next.js, Node.js, JavaScript, Web Development, Software Engineer',
+  title: 'B Sai Ram - AI Engineer & Full Stack Developer | Portfolio',
+  description: 'AI Engineer and Full Stack Developer experienced in building end-to-end Generative AI applications, Retrieval-Augmented Generation (RAG) systems, multi-agent workflows using LangGraph, and scalable microservices with FastAPI, Docker, and AWS EKS.',
+  keywords: 'AI Engineer, Full Stack Developer, Generative AI, RAG, LangGraph, LangChain, LlamaIndex, Multi-Agent Systems, Pinecone, ChromaDB, FastAPI, Docker, AWS EKS, LangSmith, CloudWatch, Grafana, React, Next.js, TypeScript, Python',
   authors: [{ name: 'B Sai Ram' }],
+  metadataBase: new URL('https://sai-portfolio-gules.vercel.app'),
   openGraph: {
-    title: 'B Sai Ram - Full Stack Developer',
-    description: 'Experienced Full Stack Developer Portfolio',
+    title: 'B Sai Ram - AI Engineer & Full Stack Developer',
+    description: 'Portfolio of B Sai Ram: AI Engineer & Full Stack Developer specializing in Generative AI, RAG, LangGraph, FastAPI, AWS EKS, and Next.js.',
     type: 'website',
+    url: 'https://sai-portfolio-gules.vercel.app',
   },
 }
 

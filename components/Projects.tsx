@@ -1,45 +1,81 @@
-import { FaExternalLinkAlt, FaGithub, FaCode } from 'react-icons/fa'
+import { FaExternalLinkAlt, FaGithub, FaBrain, FaCode, FaCogs } from 'react-icons/fa'
 
 const projects = [
   {
+    title: 'TalentScreen — Production RAG Recruitment Assistant',
+    category: 'Production RAG & Multi-Agent System',
+    icon: FaBrain,
+    url: null,
+    github: null,
+    description:
+      'An enterprise-grade recruitment knowledge assistant powered by Retrieval-Augmented Generation (RAG). Replaces traditional keyword ATS search with deep semantic candidate discovery, evaluation, and comparison across resumes, job descriptions, interview guides, and hiring SOPs.',
+    technologies: [
+      'FastAPI',
+      'Python',
+      'Milvus (Vector DB)',
+      'LangChain',
+      'BM25 Search',
+      'BGE Cross-Encoder',
+      'AWS Bedrock (Claude 3.7)',
+      'IBM Docling',
+      'Redis Caching',
+      'PostgreSQL',
+      'Langfuse',
+      'Docker Compose',
+      'React',
+    ],
+    contributions: [
+      'Architected end-to-end production RAG platform combining Milvus dense vector search (HNSW index) and BM25 lexical search with Reciprocal Rank Fusion (RRF).',
+      'Integrated BAAI/bge-reranker-base cross-encoder reranker to maximize context precision and recall for top-k candidate matching.',
+      'Engineered asynchronous document ingestion pipelines utilizing IBM Docling for high-fidelity PDF resume parsing and semantic chunking with overlap.',
+      'Developed provider-agnostic LLM generation supporting AWS Bedrock (Claude 3.7 Sonnet) and Anthropic with grounded context and zero-hallucination prompts.',
+      'Built automated security guardrails including regex-based PII redaction (emails/phone numbers) and prompt injection mitigation.',
+      'Implemented Redis query caching and PostgreSQL audit logging to achieve sub-second response times and complete audit trails.',
+      'Integrated Langfuse for end-to-end observability, tracing query executions, latency profiling, and token usage monitoring.',
+      'Containerized full 7-service microservices stack (FastAPI, Milvus, Etcd, MinIO, Redis, PostgreSQL, React UI) using Docker Compose.',
+    ],
+  },
+  {
     title: 'Whitebox Learning (WBL)',
+    category: 'Full-Stack Learning Management Platform',
+    icon: FaCode,
     url: 'https://whitebox-learning.com/',
     github: null,
     description:
-      'A comprehensive classroom and online-based training program designed specifically for developers and quality engineers. The flexible training options cater to both individual learners and corporate teams.',
+      'A comprehensive classroom and online-based training platform designed for developers and quality engineers to upskill across industry-aligned technologies with flexible learning pathways.',
     technologies: [
       'React.js',
       'Next.js',
       'TypeScript',
       'Node.js',
       'Express.js',
+      'FastAPI',
       'JWT',
       'bcrypt',
       'MySQL',
       'Redux',
-      'TailwindCSS',
+      'Tailwind CSS',
       'Docker',
       'Jest',
       'Cypress',
     ],
     contributions: [
-      'Developed responsive Login and Contact pages using ReactJS, NextJS, and TypeScript with full frontend and backend integration.',
-      'Built RESTful APIs using Node.js and Express.js to handle authentication, contact form submissions, and dynamic data fetching.',
-      'Implemented secure authentication using JWT tokens and bcrypt for password hashing on a FastAPI RESTful backend.',
-      'Integrated contact form APIs to securely store and route user messages to a MySQL database.',
-      'Utilized React Hooks (e.g., useState, useEffect, useContext) to manage component state and side effects efficiently.',
-      'Designed mobile-first, cross-browser compatible UI with TailwindCSS for a seamless user experience.',
-      'Managed global application state using Redux for consistent login and contact module behaviour.',
-      'Configured Docker containers to streamline development and staging environments.',
-      'Wrote unit and integration tests with Jest and Cypress to validate frontend workflows and backend API functionality.',
+      'Developed responsive Login and Contact modules using React.js, Next.js, and TypeScript with backend integration.',
+      'Built RESTful APIs using Node.js, Express.js, and FastAPI for authentication, contact form processing, and dynamic data fetching.',
+      'Implemented JWT-based authentication and bcrypt password hashing for secure session management.',
+      'Integrated contact form APIs with MySQL for data validation and persistence.',
+      'Managed application state using Redux and implemented automated integration tests using Jest and Cypress.',
+      'Configured Docker containers to standardize application environments.',
     ],
   },
   {
-    title: 'Avatar - Whitebox Learning Admin Management System',
+    title: 'Avatar – Whitebox Learning Admin Management System',
+    category: 'Enterprise Administration Platform',
+    icon: FaCogs,
     url: null,
     github: null,
     description:
-      'A centralized admin panel built to streamline internal operations for Whitebox Learning, including employee data management, candidate tracking, payroll processing, and access control. The application supports full CRUD functionality for HR and admin users, with a secure role-based system.',
+      'An internal enterprise administration platform built to streamline operations for Whitebox Learning, including employee records, candidate tracking, payroll processing, and granular access control.',
     technologies: [
       'Next.js',
       'React',
@@ -48,21 +84,17 @@ const projects = [
       'MySQL',
       'JWT',
       'Docker',
-      'Kubernetes',
-      'GKE',
+      'Kubernetes (GKE)',
+      'Tailwind CSS',
       'Axios',
       'JIRA',
     ],
     contributions: [
-      'Developed backend APIs using Node.js and Express.js for user authentication, employee management, and candidate tracking modules.',
-      'Designed and optimized MySQL database schemas for user profiles, candidate records, and payroll data.',
-      'Implemented role-based access control (RBAC) to restrict views and actions based on user roles.',
-      'Developed secure session handling using JWT authentication for login, logout, and session validation.',
-      'Applied modern ES6+ concepts (async/await, Promises) for efficient API communication and state management.',
-      'Employed Axios for seamless data fetching and synchronization between frontend and backend.',
-      'Containerized the application using Docker and deployed it on Google Kubernetes Engine (GKE) for scalability.',
-      'Used JIRA for Agile sprint planning, task tracking, and cross-functional team collaboration.',
-      'Designed and developed the login page, user/admin dashboards, and candidate detail pages using NextJS and React.',
+      'Developed backend microservices using Node.js and Express.js for authentication, employee records, and candidate management.',
+      'Designed and optimized MySQL database schemas with indexing for employee profiles, candidate histories, and payroll data.',
+      'Implemented role-based access control (RBAC) and secure session management using JWT and refresh tokens.',
+      'Containerized the application stack using Docker and deployed workloads on Google Kubernetes Engine (GKE).',
+      'Developed administrative dashboards and management interfaces using Next.js, React, and Tailwind CSS.',
     ],
   },
 ]
@@ -76,31 +108,40 @@ export default function Projects() {
     >
       <h2 id="projects-heading" className="section-title">Featured Projects</h2>
       <div className="max-w-6xl mx-auto space-y-10">
-        {projects.map((project, index) => (
+        {projects.map((project, index) => {
+          const ProjectIcon = project.icon
+          return (
             <article
               key={index}
-              className="glass-card group hover:scale-[1.02] hover:shadow-[0_20px_60px_rgba(59,130,246,0.15)] transition-all duration-500"
+              className="glass-card group hover:scale-[1.01] hover:shadow-[0_20px_60px_rgba(59,130,246,0.15)] transition-all duration-500"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-            <div className="flex items-start justify-between mb-6">
-              <div className="flex-1">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="bg-primary-500/20 p-3 rounded-xl">
-                    <FaCode className="text-primary-400 text-xl" aria-hidden="true" />
+              <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-6">
+                <div className="flex-1">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="bg-primary-500/20 p-3 rounded-xl text-primary-400">
+                      <ProjectIcon className="text-xl" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <span className="text-xs font-semibold text-primary-400 uppercase tracking-wider block">
+                        {project.category}
+                      </span>
+                      <h3 className="text-heading-3 text-xl sm:text-2xl">{project.title}</h3>
+                    </div>
                   </div>
-                  <h3 className="text-heading-3">{project.title}</h3>
                 </div>
+
                 <div className="flex flex-wrap items-center gap-4">
                   {project.url && (
                     <a
                       href={project.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-400 hover:text-primary-300 flex items-center gap-2 transition-colors group/link text-body-small focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#111827] rounded"
+                      className="text-primary-400 hover:text-primary-300 flex items-center gap-2 transition-colors group/link text-body-small focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#111827] rounded px-3 py-1.5 bg-primary-500/10 border border-primary-500/20"
                       aria-label={`Visit ${project.title} website (opens in new tab)`}
                     >
-                      <span>Live Demo</span>
-                      <FaExternalLinkAlt size={14} className="group-hover/link:translate-x-1 transition-transform" aria-hidden="true" />
+                      <span>Live Site</span>
+                      <FaExternalLinkAlt size={12} className="group-hover/link:translate-x-0.5 transition-transform" aria-hidden="true" />
                     </a>
                   )}
                   {project.github && (
@@ -108,55 +149,54 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary-400 hover:text-primary-300 flex items-center gap-2 transition-colors group/link text-body-small focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#111827] rounded"
+                      className="text-primary-400 hover:text-primary-300 flex items-center gap-2 transition-colors group/link text-body-small focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#111827] rounded px-3 py-1.5 bg-primary-500/10 border border-primary-500/20"
                       aria-label={`View ${project.title} on GitHub (opens in new tab)`}
                     >
-                      <FaGithub size={16} className="group-hover/link:scale-110 transition-transform" aria-hidden="true" />
-                      <span>GitHub</span>
+                      <FaGithub size={14} className="group-hover/link:scale-110 transition-transform" aria-hidden="true" />
+                      <span>Code</span>
                     </a>
                   )}
                 </div>
               </div>
-            </div>
-            
-            <p className="text-body mb-8">{project.description}</p>
-            
-            <div className="mb-8">
-              <h4 className="font-heading font-semibold text-[#F9FAFB] mb-4 flex items-center gap-3">
-                <span className="w-1 h-8 bg-primary-500 rounded" aria-hidden="true"></span>
-                Technologies Used
-              </h4>
-              <div className="flex flex-wrap gap-2.5" role="list" aria-label={`Technologies used in ${project.title}`}>
-                {project.technologies.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    role="listitem"
-                    className="px-4 py-2 bg-primary-500/10 text-primary-300 rounded-full text-sm font-medium border border-primary-500/20 hover:bg-primary-500/20 hover:border-primary-500/40 transition-all"
-                  >
-                    {tech}
-                  </span>
-                ))}
+              
+              <p className="text-body mb-6 text-gray-300 leading-relaxed">{project.description}</p>
+              
+              <div className="mb-6">
+                <h4 className="font-heading font-semibold text-[#F9FAFB] mb-3 flex items-center gap-2 text-sm">
+                  <span className="w-1.5 h-4 bg-primary-500 rounded" aria-hidden="true"></span>
+                  Technologies & Architecture
+                </h4>
+                <div className="flex flex-wrap gap-2" role="list" aria-label={`Technologies used in ${project.title}`}>
+                  {project.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      role="listitem"
+                      className="px-3 py-1 bg-primary-500/10 text-primary-300 rounded-full text-xs font-medium border border-primary-500/20"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div>
-              <h4 className="font-heading font-semibold text-[#F9FAFB] mb-4 flex items-center gap-3">
-                <span className="w-1 h-8 bg-primary-500 rounded" aria-hidden="true"></span>
-                Key Contributions
-              </h4>
-              <ul className="space-y-3" role="list">
-                {project.contributions.map((contribution, contribIndex) => (
-                  <li key={contribIndex} className="text-body flex items-start group/item">
-                    <span className="text-primary-400 mr-3 mt-1.5 group-hover/item:scale-110 transition-transform flex-shrink-0" aria-hidden="true">▸</span>
-                    <span>{contribution}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </article>
-        ))}
+              <div>
+                <h4 className="font-heading font-semibold text-[#F9FAFB] mb-3 flex items-center gap-2 text-sm">
+                  <span className="w-1.5 h-4 bg-primary-500 rounded" aria-hidden="true"></span>
+                  Key Technical Contributions
+                </h4>
+                <ul className="space-y-2" role="list">
+                  {project.contributions.map((contribution, contribIndex) => (
+                    <li key={contribIndex} className="text-body-small flex items-start group/item">
+                      <span className="text-primary-400 mr-2.5 mt-1 group-hover/item:scale-125 transition-transform flex-shrink-0 font-bold" aria-hidden="true">▸</span>
+                      <span className="text-gray-300 leading-relaxed">{contribution}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          )
+        })}
       </div>
     </section>
   )
 }
-

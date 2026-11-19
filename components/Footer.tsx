@@ -1,4 +1,4 @@
-import { FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaEnvelope, FaGlobe } from 'react-icons/fa'
 
 export default function Footer() {
   return (
@@ -10,10 +10,10 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           <div>
             <p className="text-body-small text-center md:text-left">
-              © {new Date().getFullYear()} B Sai Ram. All rights reserved.
+              © {new Date().getFullYear()} B Sai Ram. AI Engineer & Full Stack Developer.
             </p>
           </div>
-          <div className="flex space-x-6" role="list" aria-label="Social media links">
+          <div className="flex space-x-5" role="list" aria-label="Social media links">
             <a
               href="https://www.linkedin.com/in/sairam1219/"
               target="_blank"
@@ -24,11 +24,29 @@ export default function Footer() {
               <FaLinkedin size={20} aria-hidden="true" />
             </a>
             <a
-              href="mailto:BSAIRAM3011@GMAIL.COM"
+              href="https://github.com/sairam1219"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#9CA3AF] hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded p-2"
+              aria-label="View GitHub Profile (opens in new tab)"
+            >
+              <FaGithub size={20} aria-hidden="true" />
+            </a>
+            <a
+              href="mailto:sairamb3917@gmail.com"
               className="text-[#9CA3AF] hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded p-2"
               aria-label="Send email to B Sai Ram"
             >
               <FaEnvelope size={20} aria-hidden="true" />
+            </a>
+            <a
+              href="https://sai-portfolio-gules.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#9CA3AF] hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded p-2"
+              aria-label="View Live Portfolio"
+            >
+              <FaGlobe size={20} aria-hidden="true" />
             </a>
           </div>
         </div>

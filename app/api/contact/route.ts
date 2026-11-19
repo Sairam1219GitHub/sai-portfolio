@@ -32,7 +32,7 @@ export async function POST(request: NextRequest) {
     // You can replace this with actual email service integration
     
     // Example with mailto (browser will open email client)
-    const mailtoLink = `mailto:BSAIRAM3011@GMAIL.COM?subject=Portfolio Contact: ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
+    const mailtoLink = `mailto:sairamb3917@gmail.com?subject=Portfolio Contact: ${encodeURIComponent(name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`
     
     // Log the message (in production, send via email service)
     console.log('Contact form submission:', { name, email, message })

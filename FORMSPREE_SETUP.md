@@ -6,7 +6,7 @@
 
 1. Go to **https://formspree.io/**
 2. Click **"Sign Up"** (or "Get Started")
-3. Sign up with your email (use: **BSAIRAM3011@GMAIL.COM**)
+3. Sign up with your email (use: **sairamb3917@gmail.com**)
 4. Verify your email address
 
 ### Step 2: Create a New Form
@@ -14,7 +14,7 @@
 1. After logging in, click **"New Form"** or **"Create Form"**
 2. Fill in the form details:
    - **Form Name**: "Portfolio Contact Form"
-   - **Email to receive submissions**: `BSAIRAM3011@GMAIL.COM`
+   - **Email to receive submissions**: `sairamb3917@gmail.com`
    - **Form Type**: "Contact Form" or "Custom"
 3. Click **"Create Form"**
 
@@ -57,14 +57,14 @@
 
 1. Fill out the contact form on your portfolio
 2. Click "Send Message"
-3. Check your email at **BSAIRAM3011@GMAIL.COM** - you should receive the message!
+3. Check your email at **sairamb3917@gmail.com** - you should receive the message!
 
 ## 📧 How It Works
 
 1. User fills out the form on your portfolio
 2. Form submits to Formspree's endpoint
 3. Formspree validates and processes the submission
-4. **You receive an email** at BSAIRAM3011@GMAIL.COM with:
+4. **You receive an email** at sairamb3917@gmail.com with:
    - Name
    - Email
    - Message

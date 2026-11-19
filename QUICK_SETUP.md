@@ -3,10 +3,10 @@
 ## Step 1: Get Your Formspree Form ID
 
 1. **Go to:** https://formspree.io/
-2. **Sign up** with your email (BSAIRAM3011@GMAIL.COM)
+2. **Sign up** with your email (sairamb3917@gmail.com)
 3. **Verify your email** (check inbox)
 4. **Click "New Form"**
-5. **Set email to:** BSAIRAM3011@GMAIL.COM
+5. **Set email to:** sairamb3917@gmail.com
 6. **Click "Create Form"**
 7. **Copy your Form ID** (looks like: `xrbpkjqz` or `abc123`)
 
@@ -35,7 +35,7 @@ npm run dev
 
 ## ✅ Done!
 
-Now when someone fills out your contact form, you'll receive emails at **BSAIRAM3011@GMAIL.COM**!
+Now when someone fills out your contact form, you'll receive emails at **sairamb3917@gmail.com**!
 
 ## 🧪 Test It
 

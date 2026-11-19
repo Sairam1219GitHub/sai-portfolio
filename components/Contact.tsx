@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { FaEnvelope, FaPhone, FaLinkedin, FaMapMarkerAlt, FaHandshake, FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
+import { FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaMapMarkerAlt, FaHandshake, FaGlobe, FaPaperPlane, FaCheckCircle, FaExclamationCircle } from 'react-icons/fa'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -79,10 +79,10 @@ export default function Contact() {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Information Cards */}
-          <div className="space-y-6">
+          <div className="space-y-4">
             <a
-              href="mailto:BSAIRAM3011@GMAIL.COM"
-              className="glass-card group hover:border-primary-500/40 hover:scale-[1.02] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
+              href="mailto:sairamb3917@gmail.com"
+              className="glass-card group hover:border-primary-500/40 hover:scale-[1.01] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
               aria-label="Send email to B Sai Ram"
             >
               <div className="flex items-center">
@@ -91,14 +91,14 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-body-small mb-1">Email</p>
-                  <p className="text-[#F9FAFB] font-semibold text-lg">BSAIRAM3011@GMAIL.COM</p>
+                  <p className="text-[#F9FAFB] font-semibold text-base sm:text-lg break-all">sairamb3917@gmail.com</p>
                 </div>
               </div>
             </a>
 
             <a
               href="tel:+918185958722"
-              className="glass-card group hover:border-primary-500/40 hover:scale-[1.02] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
+              className="glass-card group hover:border-primary-500/40 hover:scale-[1.01] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
               aria-label="Call B Sai Ram"
             >
               <div className="flex items-center">
@@ -107,7 +107,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-body-small mb-1">Phone</p>
-                  <p className="text-[#F9FAFB] font-semibold text-lg">+91 8185958722</p>
+                  <p className="text-[#F9FAFB] font-semibold text-lg">+91 81859 58722</p>
                 </div>
               </div>
             </a>
@@ -116,7 +116,7 @@ export default function Contact() {
               href="https://www.linkedin.com/in/sairam1219/"
               target="_blank"
               rel="noopener noreferrer"
-              className="glass-card group hover:border-primary-500/40 hover:scale-[1.02] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
+              className="glass-card group hover:border-primary-500/40 hover:scale-[1.01] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
               aria-label="Connect on LinkedIn (opens in new tab)"
             >
               <div className="flex items-center">
@@ -125,21 +125,59 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-body-small mb-1">LinkedIn</p>
-                  <p className="text-[#F9FAFB] font-semibold text-lg">sairam1219</p>
+                  <p className="text-[#F9FAFB] font-semibold text-lg">linkedin.com/in/sairam1219</p>
                 </div>
               </div>
             </a>
 
-            <div className="glass-card">
+            <a
+              href="https://github.com/sairam1219"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="glass-card group hover:border-primary-500/40 hover:scale-[1.01] transition-all duration-300 block focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded-2xl"
+              aria-label="View GitHub Profile (opens in new tab)"
+            >
               <div className="flex items-center">
-                <div className="bg-primary-500/20 p-4 rounded-xl mr-4">
-                  <FaMapMarkerAlt className="text-primary-400 text-2xl" aria-hidden="true" />
+                <div className="bg-primary-500/20 p-4 rounded-xl mr-4 group-hover:bg-primary-500/30 transition-colors">
+                  <FaGithub className="text-primary-400 text-2xl" aria-hidden="true" />
                 </div>
                 <div>
-                  <p className="text-body-small mb-1">Location</p>
-                  <p className="text-[#F9FAFB] font-semibold text-lg">Hyderabad, India</p>
+                  <p className="text-body-small mb-1">GitHub</p>
+                  <p className="text-[#F9FAFB] font-semibold text-lg">github.com/sairam1219</p>
                 </div>
               </div>
+            </a>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="glass-card">
+                <div className="flex items-center">
+                  <div className="bg-primary-500/20 p-3 rounded-xl mr-3">
+                    <FaMapMarkerAlt className="text-primary-400 text-xl" aria-hidden="true" />
+                  </div>
+                  <div>
+                    <p className="text-body-small">Location</p>
+                    <p className="text-[#F9FAFB] font-semibold text-sm">Hyderabad, India</p>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href="https://sai-portfolio-gules.vercel.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass-card group hover:border-primary-500/40 transition-all block focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-2xl"
+                aria-label="Visit Portfolio Website"
+              >
+                <div className="flex items-center">
+                  <div className="bg-primary-500/20 p-3 rounded-xl mr-3 group-hover:bg-primary-500/30 transition-colors">
+                    <FaGlobe className="text-primary-400 text-xl" aria-hidden="true" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <p className="text-body-small">Portfolio URL</p>
+                    <p className="text-primary-400 font-semibold text-xs truncate">sai-portfolio-gules.vercel.app</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
 

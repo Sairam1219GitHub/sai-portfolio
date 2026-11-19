@@ -42,15 +42,13 @@ export default function Hero() {
                 <div className="relative w-full h-full rounded-3xl overflow-hidden">
                   <Image
                     src="/images/profile-photo.jpg"
-                    alt="B Sai Ram, Experienced Full Stack Developer professional headshot"
+                    alt="B Sai Ram, AI Engineer & Full Stack Developer professional headshot"
                     fill
-                    className="object-cover rounded-3xl"
+                    className="object-cover object-top rounded-3xl"
                     priority
+                    sizes="(max-width: 768px) 288px, 320px"
                     onError={() => {
-                      // Try alternative formats
-                      const img = document.createElement('img')
-                      img.onerror = () => setImageError(true)
-                      img.src = '/images/profile-photo.png'
+                      setImageError(true)
                     }}
                   />
                 </div>
@@ -69,18 +67,20 @@ export default function Hero() {
             }`}
           >
             <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-400 text-sm font-medium">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                Available for AI & Full Stack Opportunities
+              </div>
               <h1 className="text-heading-1">
                 B Sai Ram
               </h1>
               <h2 className="text-heading-2 gradient-text">
-                Full Stack Developer
+                AI Engineer & Full Stack Developer
               </h2>
             </div>
             
             <p className="text-body max-w-2xl mx-auto lg:mx-0">
-              Experienced Full Stack Developer with 2+ years of expertise in building scalable, high-performance web applications. 
-              Specialized in React, Next.js, Node.js, and cloud-native deployments with a strong focus on clean UI, secure APIs, 
-              and production-ready systems.
+              AI Engineer and Full Stack Developer with experience building end-to-end Generative AI applications, Retrieval-Augmented Generation (RAG) systems, and multi-agent workflows using LangGraph. Experienced in document processing, embedding generation, hybrid retrieval, vector databases, multi-query retrieval, and LLM evaluation. Skilled in developing scalable AI microservices using Python, FastAPI, Docker, and AWS EKS, with expertise in workflow orchestration, CI/CD automation, and AI observability using LangSmith, AWS CloudWatch, and Grafana.
             </p>
 
             {/* Social Links */}
@@ -95,7 +95,16 @@ export default function Hero() {
                 <FaLinkedin aria-hidden="true" />
               </a>
               <a
-                href="mailto:BSAIRAM3011@GMAIL.COM"
+                href="https://github.com/sairam1219"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-3xl text-[#9CA3AF] hover:text-primary-400 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded"
+                aria-label="View GitHub Profile"
+              >
+                <FaGithub aria-hidden="true" />
+              </a>
+              <a
+                href="mailto:sairamb3917@gmail.com"
                 className="text-3xl text-[#9CA3AF] hover:text-primary-400 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-[#0B0F14] rounded"
                 aria-label="Send email to B Sai Ram"
               >

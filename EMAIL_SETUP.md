@@ -36,7 +36,7 @@ export async function POST(request: NextRequest) {
     // Send email via Resend
     await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', // Update with your verified domain
-      to: 'BSAIRAM3011@GMAIL.COM',
+      to: 'sairamb3917@gmail.com',
       subject: `Portfolio Contact: ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -101,7 +101,7 @@ const handleSubmit = async (e: React.FormEvent) => {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        to_email: 'BSAIRAM3011@GMAIL.COM',
+        to_email: 'sairamb3917@gmail.com',
       }
     )
     
@@ -132,7 +132,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   onSubmit={handleSubmit}
 >
   {/* Add hidden input for Formspree */}
-  <input type="hidden" name="_to" value="BSAIRAM3011@GMAIL.COM" />
+  <input type="hidden" name="_to" value="sairamb3917@gmail.com" />
   {/* Rest of form fields */}
 </form>
 ```
